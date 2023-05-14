@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Emitir recibos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <!-- bagulhete do boilerplate -->
+         
+        <style>
+            form {
+        background-color: rgb(255, 230, 0);
+        color: rgb(4, 0, 255);
+        font-family: Helvetica, italic;
+        padding: 20px;
+        width: 500px;
+        margin: auto; /* centraliza o formulário */
+        border-radius: 56px;
+background: #ffea00;
+box-shadow: inset 5px 5px 10px #665e00,
+            inset -5px -5px 10px #ffff00;
+    }
+
+    select{ 
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    label {
+      display: inline-block;
+      width: 200px;
+      margin-bottom: 10px; /* adiciona uma margem inferior */
+      
+    }
+
+    input {
+        width: 250px;
+        border-radius: 6px;
+        background: #ffffff;
+        box-shadow: inset 1px 1px 2px #ffffff,
+            inset -1px -1px 2px #ffffff;
+    }
+    
+    textarea {    
+         width: 250px;
+        border-radius: 6px;
+        background: #ffffff;
+        box-shadow: inset 1px 1px 2px #7a7a7a,
+        inset -1px -1px 2px #ffffff;
+    }
+
+    input[type="number"] {
+      width: 100px;
+    }
+
+    button {
+      background-color: white;
+      color: rgb(255, 255, 255);
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 15px;
+        background: #0011ff;
+        box-shadow: inset 24px 24px 49px #0011ff,
+            inset -24px -24px 49px #000000;
+    }
+    .sair {
+        background-color: rgb(255, 0, 0);
+        color: white;
+        border-radius: 15px;
+    background: linear-gradient(145deg, #ff0000, #e60000);
+    box-shadow:  -2px -2px 3px #660000,
+             0px 0px 3px #ff0000;
+    }
+
+    </style>
+
+    </head>
+    <body>   
+        <script src="" async defer></script>
+    </body>
+</html>
+
+<form>
+    <!-- Titulo -->
+    <center>
+    <h1 class="titulo">Emissão de Recibo</h1>
+   
+    <select><br>
+        <option value="0">Forma de pagamento</option>
+        <option value="1">Dinheiro</option>
+        <option value="2">Boleto</option>
+        <option value="3">Pix</option>
+        <option value="2">Cartão de crédito</option>
+        <option value="3">Cartão de débito</option>
+    </select>
+    </center>
+
+    <!-- Titulo e area de texto -->
+    <label for="data-recibo">Data do recibo:</label>
+        <input type="date" id="data-recibo" name="data-recibo"><br>
+
+    <label for="numero-recibo">Número do recibo:</label>
+        <input type="number" id="numero-recibo" name="numero-recibo"><br>
+
+    <label for="nome-pagador">Nome do pagador:</label>
+        <input type="text" id="nome-pagador" name="nome-pagador"><br>
+
+    <label for="cpf-cnpj-pagador">CPF/CNPJ do pagador:</label>
+        <input type="text" id="cpf-cnpj-pagador" name="cpf-cnpj-pagador"><br>
+
+        
+    <label for="nome-beneficiario">Nome do beneficiário:</label>
+        <input type="text" id="nome-beneficiario" name="nome-beneficiario"><br>
+
+    <label for="cpf-cnpj-beneficiario">CPF/CNPJ do beneficiário:</label>
+        <input type="text" id="cpf-cnpj-beneficiario" name="cpf-cnpj-beneficiario"><br>
+
+    <label for="descricao-servico">Descrição do serviço/produto:</label>
+        <textarea id="descricao-servico" name="descricao-servico"></textarea><br>
+
+    <label for="valor-total">Valor total:</label>
+        <input type="number" id="valor-total" name="valor-total"><br>
+
+    <label for="observacao">Observação:</label>
+        <textarea id="observacao" name="observacao"></textarea><br>
+        
+    <!-- BOTÕES -->
+    <center>
+    <button>Imprimir</button>
+    <button class="sair" onclick="sair()">Sair</button>
+    <button>Limpar</button>
+    </center>
+
+    <script>
+     function sair() {
+    window.close();   
+}
+    </script>
